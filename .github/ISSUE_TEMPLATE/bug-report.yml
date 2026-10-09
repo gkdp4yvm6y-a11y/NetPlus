@@ -1,0 +1,36 @@
+name: Ошибка в NetPulse
+description: Сообщить о проблеме в приложении
+title: "[Ошибка] "
+body:
+  - type: markdown
+    attributes:
+      value: "Не публикуйте пароли, ключи, реальные адреса сети и личные названия устройств. Скриншоты и журналы сначала обезличьте."
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Платформа
+      options:
+        - Windows
+        - Android
+        - iOS
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Версия и сборка
+      placeholder: "Например: 0.6.13 / Android 61302"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как воспроизвести
+      description: Шаги, ожидаемый и фактический результат. Укажите, используется ли VPN; его настройки и ключи не прикладывайте.
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Дополнительные сведения
+      description: Модель устройства, версия системы, обезличенные сообщения об ошибках и скриншоты.
